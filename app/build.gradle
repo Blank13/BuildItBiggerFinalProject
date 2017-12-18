@@ -45,11 +45,8 @@ dependencies {
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
-        exclude group: 'com.android.support', module: 'support-annotations'
-    })
     compile 'com.android.support:appcompat-v7:27.0.2'
-    compile 'com.google.android.gms:play-services-ads:11.6.2'
+    freeCompile 'com.google.android.gms:play-services-ads:11.6.2'
     //My App dependencies
     compile project(":JokesJlib")
     compile project(":JokesAlib")

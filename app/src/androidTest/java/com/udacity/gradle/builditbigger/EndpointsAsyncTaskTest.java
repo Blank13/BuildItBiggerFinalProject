@@ -23,18 +23,12 @@ public class EndpointsAsyncTaskTest {
     }
 
     @Test
-    public void testDataHasComeAndNotEmpty() {
+    public void testDataHasComeAndNotEmpty() throws ExecutionException, InterruptedException {
         Context context = getTargetContext();
         EndpointsAsyncTask mendPoint = new EndpointsAsyncTask();
         mendPoint.execute(context);
         String joke = "";
-        try {
-            joke = mendPoint.get();
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        } catch (ExecutionException e) {
-            e.printStackTrace();
-        }
+        joke = mendPoint.get();
         assertNotNull("The Joke Was null",joke);
         assertNotEquals("The Joke was empty", "", joke);
     }
